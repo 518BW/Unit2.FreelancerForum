@@ -1,5 +1,3 @@
-//Defined arrays for possible names and occupations
-
 const state = {
     averagePrice: 50,
     freelancers: [
@@ -93,6 +91,7 @@ function render() {
 
 render();
 
+//Arrays for possible names and occupations
 const randomNames = ['Chris', 'Jon', 'Asher', 'Jess', 'Micah'];
 const randomJobs = ['construction', 'architect', 'web designer', 'painter'];
 
