@@ -8,7 +8,7 @@ const state = {
     { name: "Carol", price: 70, occupation: "programmer" }    
 ]};
 
-
+//updates average price
 function updateAveragePrice() {
     let total = 0;
 
@@ -21,6 +21,7 @@ function updateAveragePrice() {
     state.averagePrice = Math.round(total / state.freelancers.length);
 } 
 
+//Adds rows to freelancer table
 function addFreelancerRow(freelancer){
     state.freelancers.push(freelancer);
 }
@@ -41,6 +42,7 @@ function createFreelancerTableRow(freelancer) {
     return tr;
 }
 
+//Creates table headers after clear() clears table
 function createTableHeaders(){
     const tr = document.createElement('tr');
 
@@ -57,6 +59,7 @@ function createTableHeaders(){
     return tr;
 }
 
+//Clears table and ???
 function clearTable() {
     const table = document.getElementById('freelancer_table');
 
@@ -65,6 +68,7 @@ function clearTable() {
     }
 }
 
+//Returns the HTML to be rendered
 function render() {
     clearTable();
 
@@ -84,7 +88,7 @@ function render() {
 
     const priceText = document.getElementById('average_price_text')
 
-    priceText.textContent = `The average starting price is $${state.averagePrice}.`;
+    priceText.textContent = `The average starting price is $${state.averagePrice}.`; //Freaking backticks not quotation marks
 }
 
 render();
